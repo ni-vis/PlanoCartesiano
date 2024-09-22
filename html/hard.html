@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hard Level</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../images/favicon.ico">
+</head>
+<body>
+    <header style="background-color: red; text-align: center; padding: 10px; margin-bottom:20px;color: white">
+        <h1 style="margin: 0;">* DIFÍCIL *</h1>
+    </header>
+    
+        <section id="plano" class="section">
+            <div id="controls">
+                <div id="coordinate-display">Coordenada alvo: (0, 0)</div>
+                <button id="new-game">Nova Coordenada</button>
+                <a href="rule.html">
+                    <button id="back-button">Voltar</button>
+                </a>
+            </div>
+
+
+            <div id="game-container">
+                <canvas id="cartesian-plane" width="878" height="878"></canvas>
+                <!-- Modal para exibir o resultado -->
+                <div id="result-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-button" id="close-modal">&times;</span>
+                        <p id="modal-message">Resultado</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+
+    <script src="../script/scriptHard.js"></script>
+</body>
+</html>

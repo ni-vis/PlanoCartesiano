@@ -1,0 +1,260 @@
+/* Estilo básico para o corpo */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    background: linear-gradient(to right, #c3c1c1, #f5f5f5);
+}
+
+/* Contêiner para rolagem horizontal */
+#main-container {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Seções de tela */
+.section {
+    min-width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Contêiner dos controles */
+#controls {
+    position: absolute;
+    left: 20px; /* Espaço da borda esquerda */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f5f5f5;
+    padding: 15px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Estilo para os botões dos controles */
+#controls button {
+    margin: 5px 0;
+}
+
+/* Contêiner do plano cartesiano */
+#game-container {
+    position: absolute;
+    padding-top: 250px;
+    margin-left: 250px;
+    padding-bottom: 5px;
+}
+
+#cartesian-plane {
+    border: 2px solid #000; /* Borda no canvas */
+}
+
+/* Modal */
+#result-modal {
+    position: fixed;
+    display: none;
+    width: 300px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: black;
+}
+
+.cartesian-plane {
+    top: 100px;
+}
+
+.next-button1 {
+    background-color: #fff;
+    color: #000;
+    width: 50px;
+    height: 50px;
+}
+
+.next-button1:hover {
+    background-color: #fff;
+}
+
+/* Estilo geral do container de controles */
+#controls1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 40%; /* Distância do topo da página */
+    left: 20px; /* Distância da esquerda da página */
+    width: 300px; /* Largura do container */
+    padding: 15px; /* Espaçamento interno */
+    background-color: #f9f9f9; /* Cor de fundo branca */
+    border: 2px solid #ddd; /* Borda cinza clara */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Estilo do display de coordenadas */
+#coordinate-display {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f9f9f9; /* Fundo levemente cinza */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #333; /* Cor do texto */
+}
+
+/* Estilo dos botões */
+button {
+    margin: 5px 0;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Estilo específico do botão de voltar */
+#back-button {
+    width: 40vh;
+}
+
+/* Home */
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+#home h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Estilo para ambos os botões (Próxima Página e Voltar) */
+.next-button {
+    padding: 15px 30px;
+    font-size: 1em;
+    border: none;
+    border-radius: 25px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    text-decoration: none; /* Remove o sublinhado */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: block; /* Força o botão a ocupar toda a linha */
+    margin-bottom: 15px; /* Espaço entre os botões */
+}
+
+.next-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Estilo da seção rules para alinhar os itens verticalmente */
+#rules {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#rules p {
+    margin-bottom: 20px; /* Espaço abaixo do parágrafo */
+}
+
+#rules a {
+    width: 100%; /* Garantir que os botões ocupem toda a largura disponível */
+    display: flex;
+    justify-content: center;
+}
+
+/* Remover decoração de link dos botões */
+#rules a {
+    text-decoration: none; /* Remove o sublinhado */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    #controls {
+        left: 10px; /* Reduzir espaço à esquerda */
+        width: 80%; /* Largura adaptável */
+        padding: 10px;
+    }
+
+    #controls1 {
+        width: 80%; /* Largura adaptável */
+        padding: 10px;
+    }
+
+    #main-container {
+        flex-direction: column; /* Mudar para coluna em telas pequenas */
+    }
+
+    .section {
+        padding: 10px; /* Reduzir padding em telas pequenas */
+    }
+
+    #result-modal {
+        width: 90%; /* Modal mais largo em telas pequenas */
+        padding: 15px;
+    }
+
+    #home h1 {
+        font-size: 2em; /* Diminuir tamanho da fonte */
+    }
+}
+
+@media (max-width: 480px) {
+    #controls {
+        left: 5px; /* Mínimo espaço à esquerda */
+        width: 90%; /* Largura quase total */
+    }
+
+    #controls1 {
+        width: 90%; /* Largura quase total */
+    }
+
+    #home h1 {
+        font-size: 1.5em; /* Diminuir ainda mais */
+    }
+
+    .next-button {
+        padding: 10px 20px; /* Ajustar padding */
+        font-size: 0.9em; /* Ajustar fonte */
+    }
+}
